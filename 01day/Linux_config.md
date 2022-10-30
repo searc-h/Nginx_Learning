@@ -19,7 +19,7 @@
 ### 查看虚拟机ip地址
 1. 下载net-tools sudo apt-get install net-tools
 2. 查看虚拟机ip地址 ifconfig 
-3. ![image]('https://github/searc-h/nginx+learn/images/ifconfig.png')
+3. ![image]('https://github.com/searc-h/Nginx_Learning/tree/master/01day/images/ifconfig.png')
 
 ### 放行22端口 
 - sudo apt-get install openssh-server
