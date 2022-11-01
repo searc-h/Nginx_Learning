@@ -19,11 +19,12 @@
 ### 查看虚拟机ip地址
 1. 下载net-tools sudo apt-get install net-tools
 2. 查看虚拟机ip地址 ifconfig 
-3. ![image]('https://github.com/searc-h/Nginx_Learning/blob/master/01day/images/ifconfig.png')
+
+<img src='https://github.com/searc-h/Nginx_Learning/blob/master/01day/images/ifconfig.png?raw=true' alt="image-day01" style="zoom:50%;"/>
 
 ### 放行22端口 
-- sudo apt-get install openssh-server
-- sudo apt-get install ufw
+- sudo apt-get install openssh-server #可用ssh连接
+- sudo apt-get install ufw    #防火墙
 - sudo ufw enable
 - sudo ufw allow 22
 
