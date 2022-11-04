@@ -30,20 +30,40 @@
 - docker pull redis:6.0 / redis:latest  拉取镜像
 - docker rmi redis/Id 删除镜像
 - docker ps 查看所有正在运行的容器实例
-    - docker ps -a
-    - docker ps -l 
-    - docker ps -n 
-    - docker ps -m
+    - docker ps -a 正在
+    - docker ps -l 所有
+    - docker ps -n 最近
+    - docker ps -m 
 
 - docker run [optioins] IMAGES [command] [arg...]  基于镜像生成容器实例
     - options: 
         - --name ：为容器分配自定义名字
         - -it ：启动交互式容器（前台伪终端，等待交互）
+        - -d : 启动后台容器
         - -P（大写） : 系统分配随机端口
         - -p（小写）: 指定端口映射
 
     - 例如：
         - docker run -it ubuntu /bin/bash
         希望交互式终端配置该容器，并使用shell终端
+        - docker run -d redis
+        希望后台运行该容器
+
+- exit 退出容器，容器停止
+- Ctrl + q + p 退出容器，容器继续运行
+
+- docker exec -it ID /bin/bash创建新线程进入容器
+    - exit 退出，并不会停止容器
+
+- docker attach ID 进入容器
+    - exit 退出并停止容器
+
+- 拷贝文件
+    - 容器 -> 主机
+        - docker cp ID:容器目录 宿主机文件路径
+- 拷贝镜像
+    - docker export ID > name.tar 
+    - cat name.tar | docker import -镜像用户/镜像名：就像版本号 （自定义）
+
 
 
