@@ -14,7 +14,8 @@
 
 - docker inspect 容器ID  查看里面的Mounts路径
 
-- docker stop 容器ID
-- docker start 容器ID
+- docker rm 容器ID
+- docker run -it -v /home/dhubt/desktop/host_docker_data:/tmp/docker_data（默认rw，可指定为rw或者ro） --privileged=true ubuntu
+
 - 查看文件还在，并且是最新的
 
