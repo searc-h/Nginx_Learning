@@ -17,12 +17,12 @@
 ### 解决数据备份
 - 命令如下
     ```
-        docker run -d -p 3306:3306 --privileged=true
-        -v /home/dhubt/Desktop/mysql/log:/var/log/mysql
-        -v /home/dhubt/Desktop/mysql/data:/var/lib/mysql
-        -v /home/dhubt/Desktop/mysql/conf:/etc/mysql/conf.d
-        -e MYSQL_ROOT_PASSWORD=123456 
-        --name mysqlTest 
+        docker run -d -p 3306:3306 --privileged=true \
+        -v /home/dhubt/Desktop/mysql/log:/var/log/mysql \
+        -v /home/dhubt/Desktop/mysql/data:/var/lib/mysql \
+        -v /home/dhubt/Desktop/mysql/conf:/etc/mysql/conf.d \
+        -e MYSQL_ROOT_PASSWORD=123456 \
+        --name mysqlTest \
         mysql:5.7
     ```
 ### 解决中文字符的问题
@@ -65,6 +65,17 @@
     ```
 
 - 再次进入，查看原始数据还在不在
+
+
+### 解决WorkBench连接数据库失败问题
+- Hostname:192.168.177.128
+- Port:3306
+- Username:root
+- Password:123456
+
+### workbench字符集
+- alert table修改即可
+
 
 
 
